@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  text-align: center;
+  background-color: #051016; /*Background colour for the whole app*/
+  height: 100vh; /*Ensures app covers 100% of the height of the screen*/
+  width: 100vw; /*Ensures app covers 100% of the width of the screen*/
+  display: flex; /*Ensures horizontal placement of child divs (Side_Page, Main_Page)*/
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#Side_Page_Container{
+  height: 80%; /*80% height of parent div (App)*/
+  width: 15%; /*15% width of parent div (App)*/
+  margin-left: 5%; /*Small gap between edge of parent div and this div*/
+  margin-top: 5%; /*Small gap between edge of parent div and this div*/
+}
+
+#Main_Page{
+  height: 80%; /*80% height of parent div (App)*/
+  width: 70%; /*70% width of parent div (App)*/
+  margin-left: 5%; /*Small gap between edge of parent div and this div*/
+  margin-top: 5%; /*Small gap between edge of parent div and this div*/
+}
+  #Whole_Projects_Container_Div {
+    height: 100%; /*100% height of parent div(Main_Page)*/
   }
-  to {
-    transform: rotate(360deg);
+  #Project_Folders_Container {
+    height: 70%; /*65% height of parent div (Whole_Projects_Container_Div)*/
+  }
+  #Listed_Techs_Container {
+    margin-top: 5%; /*Small gap between edge of parent div and this div*/
+    height: 21.2%; /*Very specific percentage needed for some reason (Whole_Projects_Container_Div parent)*/
+  }
+  #Zoomed_In_Side_Page_Container{
+    height: 0%;
+    gap: 2rem; /*Add a small gap(x-direction) between child div buttons*/
+    display: none; /*Start hidden when not zoomed in*/
+    border-top: #01CDFE 2px solid;
+    border-right: #01CDFE 2px solid;
+    border-left: #01CDFE 2px solid; /*Container neon blue outline split into 3 components as bottom not needed (hugs sister div)*/
+  }
+
+
+
+/*Reusable Properties*/
+.Container_Box {
+  border: 2px solid #01CDFE; /* Small neon blue outline to container */
+}
+
+/*Main_Page/Side_Page effects on zoom in (remove side page and grow main page)*/
+
+/*Slight zoom in*/
+@media(max-width: 1400px){
+  #Main_Page{
+    width: 95%; /*95% width of parent div (App)*/
+    margin-right: 5%; /*Small gap between edge of parent div and this div*/
+  }
+    #Project_Folders_Container {
+      height: 60%; /*60% height of parent div (Main_Page)*/
+    }
+    #Zoomed_In_Side_Page_Container{
+      display: flex; /*Reveal div on zoom in*/
+      height: 10%; /*10% height of parent div (Main_Page)*/
+    }
+
+  #Side_Page_Container{
+    display: none;
+  }
+}
+
+/*VERY big zoom in (changes for projects only)*/
+
+@media(max-width: 800px){
+  #Zoomed_In_Side_Page_Container {
+    height: 20%;
+  }
+  #Project_Folders_Container {
+    height: 80%;
+  }
+  #Listed_Techs_Container {
+    display: none;
   }
 }
