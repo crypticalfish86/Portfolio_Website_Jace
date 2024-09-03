@@ -1,0 +1,11 @@
+TITLE: CS50
+
+DATE: March/2023 - Sept/2023  
+
+TECHNOLOGIES_USED:  
+
+DESCRIPTION:
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in urna eget nibh rutrum placerat quis ut sapien. Cras eleifend dapibus tortor, placerat sollicitudin sem consequat vel. Morbi odio odio, aliquam at augue id, sollicitudin venenatis nisl. Nullam nec enim justo. Proin dignissim eget dolor at pellentesque. Vestibulum a posuere ante. Nulla lacinia congue finibus.
+
+Vivamus scelerisque nunc non faucibus scelerisque. Pellentesque lacinia ut mi id dictum. Aenean sed metus elementum, finibus sit. 
