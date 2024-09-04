@@ -2,6 +2,8 @@ export const SidePageButton = (props) =>
 {
     const buttonName = props.name;
     return(
-        <div>{buttonName}</div>
+        <div id="Side_Page_Button">
+            {buttonName}
+        </div>
     )
 }

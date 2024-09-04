@@ -1,8 +1,15 @@
+/*Import VT323 font for website use*/
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/*Top Level CSS*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .App {
@@ -11,6 +18,7 @@
   height: 100vh; /*Ensures app covers 100% of the height of the screen*/
   width: 100vw; /*Ensures app covers 100% of the width of the screen*/
   display: flex; /*Ensures horizontal placement of child divs (Side_Page, Main_Page)*/
+  overflow-y: scroll; /*Ensures on zoom in any overflow does not cause a scroll wheel to appear (which would scroll down to show whitespace)*/
 }
 
 #Side_Page_Container{
@@ -29,31 +37,91 @@
   #Whole_Projects_Container_Div {
     height: 100%; /*100% height of parent div(Main_Page)*/
   }
-  #Project_Folders_Container {
-    height: 70%; /*65% height of parent div (Whole_Projects_Container_Div)*/
-  }
-  #Listed_Techs_Container {
-    margin-top: 5%; /*Small gap between edge of parent div and this div*/
-    height: 21.2%; /*Very specific percentage needed for some reason (Whole_Projects_Container_Div parent)*/
-  }
+
+#Whole_Home_Container_Div{
+  height: 100%;
+}
+
   #Zoomed_In_Side_Page_Container{
-    height: 0%;
+    height: 0%; /*Start hidden when not zoomed in*/
     gap: 2rem; /*Add a small gap(x-direction) between child div buttons*/
     display: none; /*Start hidden when not zoomed in*/
+    justify-content: center; /*Horizontal child div centering*/
+    align-items: center; /*Vertical child div centering*/
     border-top: #01CDFE 2px solid;
     border-right: #01CDFE 2px solid;
     border-left: #01CDFE 2px solid; /*Container neon blue outline split into 3 components as bottom not needed (hugs sister div)*/
   }
 
 /*Home divs*/
+  #Welcome_Div{
+    height: 10%;
+    width: 100%;
+    font-size: 6rem;
+  }
+  #Middle_Content_Details_Container {
+    margin-top: 5%;
+    height: 60%;
+    width: 100%;
+    display: flex;
+  }
+    #Description_Div{
+      width: 70%;
+      font-size: 3rem;
+      text-align: left;
+      line-height: 1.5;
+      margin-left: 1%;
+      
+    }
+    #Jace_Portrait_Container_Div{
+      margin-left: 2%;
+      width: 25%;
+      height: auto;
+    }
+      #Portrait{
+        margin-top: 2%;
+        width: 97%;
+        height: 98%;
+      }
+  #Enjoy_Div{
+    height: 20%;
+    width: 100%;
+    font-size: 4.5rem;
+    text-align: left;
+    margin-left: 1%;
+  }
+
 /*Experience divs*/
 /*Project divs*/
+  #Project_Folders_Container { /*Parent div: Whole_Projects_Container_Div*/
+    height: 70%; /*70% height of parent div (Whole_Projects_Container_Div)*/
+  }
+    #Project_Folders {
+      display: flex;
+      margin-left: 1%;
+      margin-top: 1%;
+      gap: 1rem;
+    }
+      #Single_Project_Folder {
+        border: #01CDFE 1px solid;
+      }
+
+      
+  #Listed_Techs_Container { /*Parent div: Whole_Projects_Container_Div*/
+    margin-top: 5%; /*Small gap between edge of parent div and this div*/
+    height: 21.2%; /*Very specific percentage needed for some reason (Whole_Projects_Container_Div parent)*/
+  }
+
 
 /*Contact divs*/
 
 /*Reusable Properties*/
 .Container_Box {
   border: 2px solid #01CDFE; /* Small neon blue outline to container */
+}
+
+.Picture_Border {
+  border: #FEB400 2px solid;
 }
 
 /*Main_Page/Side_Page effects on zoom in (remove side page and grow main page)*/
@@ -63,6 +131,7 @@
   #Main_Page{
     width: 95%; /*95% width of parent div (App)*/
     margin-right: 5%; /*Small gap between edge of parent div and this div*/
+    height: fit-content;
   }
     #Project_Folders_Container {
       height: 60%; /*60% height of parent div (Main_Page)*/
@@ -73,6 +142,10 @@
     }
 
   #Side_Page_Container{
+    display: none;
+  }
+
+  #Enjoy_Div{
     display: none;
   }
 }
@@ -87,6 +160,9 @@
     height: 80%;
   }
   #Listed_Techs_Container {
+    display: none;
+  }
+  #Jace_Portrait_Container_Div{
     display: none;
   }
 }

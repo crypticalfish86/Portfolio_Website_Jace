@@ -73,7 +73,7 @@ export const ProjectFolders = () =>
         const workObjects = useMemo( () =>
             {
                 return importAllWorkObjects(require.context('../../../Assets/All_Prior_Work'))
-            }
+            }, []
         )
 
         const [currentWorkObjectHTML, setWorkObjectHTML] = useState(<div>Project Screen: Empty projects</div>)
@@ -83,20 +83,20 @@ export const ProjectFolders = () =>
             {
                 const workObjectHTML = [];
 
+                //for every workObject in the array push a SingleProjectFolder to workObjectHTML
                 workObjects.forEach( (workObject) =>
                     {
                         workObjectHTML.push(<SingleProjectFolder />)
                     }
-
                 )
 
                 if (workObjectHTML.length > 0)
                 {
                     setWorkObjectHTML(workObjectHTML)
                 }
-            }, workObjects
+            }, [workObjects] //reruns this useEffect every time workObjects is changed/updated
         )
-        
+
     return(
         <div id="Project_Folders">
             {currentWorkObjectHTML}

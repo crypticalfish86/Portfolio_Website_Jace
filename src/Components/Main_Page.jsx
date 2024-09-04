@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { SidePageButton } from "./Side_Page/SidePageButton"
 import { Projects } from "./Main_Page/Projects";
+import { Home } from "./Main_Page/Home";
 
 export const MainPage = () =>
 {
@@ -11,7 +12,7 @@ export const MainPage = () =>
     /*Temp set up of function until other pages are created*/
     function changeMainPageVariationHTML(currentPageName)
     {
-        setMainPageVariationHTML(<Projects />)
+        setMainPageVariationHTML(<Home />)
     }
     useEffect(() => {changeMainPageVariationHTML("Projects")}, [])
 
