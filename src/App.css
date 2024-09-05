@@ -53,6 +53,21 @@
     border-left: #01CDFE 2px solid; /*Container neon blue outline split into 3 components as bottom not needed (hugs sister div)*/
   }
 
+#Whole_Contacts_Container_Div{
+  height: 100%;
+}
+
+
+/*Side Page Divs*/
+  #Side_Page_Button_Container {
+    margin-top: 20%;
+    font-size: 3rem; /*Largest font possible without overflow while side page is displayed*/
+    
+  }
+    #Side_Page_Button {
+      margin-top: 10%; /*Some space between each div*/
+    }
+
 /*Home divs*/
   #Welcome_Div{
     height: 10%;
@@ -114,6 +129,33 @@
 
 
 /*Contact divs*/
+#Contact_Information_Container {
+  font-size: 3rem;
+  text-align: left;
+  margin-left: 1%;
+}
+
+#Thankyou_Container{
+  text-align: left;
+  margin-left: 5%;
+  font-size: 5rem;
+  display: flex;
+}
+  #Thankyou{
+    margin-top: 20%;
+  }
+  #Contact_Portrait_Container{
+    margin-left: 70%;
+    margin-top: -25%;
+    width: 25%;
+    height: auto;
+}
+    #Contact_Portrait{
+      margin-top: 2%;
+      width: 97%;
+      height: 98%;
+    }
+
 
 /*Reusable Properties*/
 .Container_Box {
@@ -125,6 +167,16 @@
 }
 
 /*Main_Page/Side_Page effects on zoom in (remove side page and grow main page)*/
+
+/*Very slight zoom in*/
+@media(max-width: 1800px){
+  #Enjoy_Div{
+    display: none;
+  }
+  #Whole_Contacts_Container_Div{
+    height: fit-content;
+  }
+}
 
 /*Slight zoom in*/
 @media(max-width: 1400px){
@@ -140,12 +192,17 @@
       display: flex; /*Reveal div on zoom in*/
       height: 10%; /*10% height of parent div (Main_Page)*/
     }
-
   #Side_Page_Container{
     display: none;
   }
+}
 
-  #Enjoy_Div{
+/*In between big zoom and small zoom*/
+@media(max-width:  1100px){
+  #Jace_Portrait_Container_Div{ /*Portrait starts becoming compressed after a while so change its properties here to circumvent that*/
+    display: none;
+  }
+  #Contact_Portrait_Container {
     display: none;
   }
 }
@@ -160,9 +217,6 @@
     height: 80%;
   }
   #Listed_Techs_Container {
-    display: none;
-  }
-  #Jace_Portrait_Container_Div{
     display: none;
   }
 }

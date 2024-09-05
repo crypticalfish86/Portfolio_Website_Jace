@@ -8,11 +8,11 @@ export const Home = () =>
             </div>
             <div id="Middle_Content_Details_Container">
                 <p id="Description_Div">
-                    My name is Jace Weerawardena,
-                    I am an aspiring software engineer.
-                    Welcome to my portfolio website, to
-                    get started navigate my work and details
-                    via the sidebar.
+                    My name is Jace Weerawardena, <br />
+                    I am an aspiring software engineer. <br />
+                    Welcome to my portfolio website, to <br />
+                    get started navigate my work and details <br />
+                    via the sidebar. <br />
                 </p>
                 <div id="Jace_Portrait_Container_Div" className="Picture_Border">
                     <img id="Portrait" src={jacePortrait} alt="A portrait of the web developer"/>
