@@ -43,6 +43,7 @@
 }
 
   #Zoomed_In_Side_Page_Container{
+    font-size: 3vw; /*Maintains a constant size (best we can do to account for 500% zoom in*/
     height: 0%; /*Start hidden when not zoomed in*/
     gap: 2rem; /*Add a small gap(x-direction) between child div buttons*/
     display: none; /*Start hidden when not zoomed in*/
@@ -52,6 +53,9 @@
     border-right: #01CDFE 2px solid;
     border-left: #01CDFE 2px solid; /*Container neon blue outline split into 3 components as bottom not needed (hugs sister div)*/
   }
+    #Zoom_Side_Text{
+      margin-bottom: 1rem;
+    }
 
 #Whole_Contacts_Container_Div{
   height: 100%;
@@ -64,8 +68,18 @@
     font-size: 3rem; /*Largest font possible without overflow while side page is displayed*/
     
   }
-    #Side_Page_Button {
+    #Hover_Box {
+      margin-left: auto; /*Centres div with margin-right*/
+      margin-right: auto; /*Centres div with margin-left*/
+      width: fit-content; /*Makes box as big as text inside*/
       margin-top: 10%; /*Some space between each div*/
+    }
+      #Hover_Box:hover { /*Triggers effects when moues hovers over*/
+        background-color: #FEB400;
+        color: black;
+      }
+    #Side_Page_Button {
+
     }
 
 /*Home divs*/
