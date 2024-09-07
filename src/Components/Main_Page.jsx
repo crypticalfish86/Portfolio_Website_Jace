@@ -13,7 +13,7 @@ export const MainPage = () =>
     /*Temp set up of function until other pages are created*/
     function changeMainPageVariationHTML(currentPageName)
     {
-        setMainPageVariationHTML(<Contacts />)
+        setMainPageVariationHTML(<Projects />)
     }
     useEffect(() => {changeMainPageVariationHTML("Projects")}, [])
 

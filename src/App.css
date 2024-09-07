@@ -123,7 +123,7 @@
 /*Experience divs*/
 /*Project divs*/
   #Project_Folders_Container { /*Parent div: Whole_Projects_Container_Div*/
-    height: 70%; /*70% height of parent div (Whole_Projects_Container_Div)*/
+    height: 60%; /*70% height of parent div (Whole_Projects_Container_Div)*/
   }
     #Project_Folders {
       display: flex;
@@ -138,9 +138,41 @@
       
   #Listed_Techs_Container { /*Parent div: Whole_Projects_Container_Div*/
     margin-top: 5%; /*Small gap between edge of parent div and this div*/
-    height: 21.2%; /*Very specific percentage needed for some reason (Whole_Projects_Container_Div parent)*/
+    height: 31.2%; /*Very specific percentage needed for some reason (Whole_Projects_Container_Div parent)*/
+    display: flex;
+    overflow: hidden; /*Ensures currently undisplayed boxes don't go off the page*/
   }
-
+    #Tech_Images_Display{
+      display: flex; /*Place child divs horizontall to each other*/
+      margin-top: 2%;
+      animation: 15s slide infinite linear; /*looping animation creating an infinite repeating loop (when 3 or more of the techs are conjoined*/
+    }
+      /*Slide moves the div from right to left offscreen*/
+      @keyframes slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+      #Tech_Image_Box_Container {
+        height: 80%;
+        width: 10rem;
+        margin-left: 1%; /*Gives a small space between each box*/
+        outline: 2px solid #01CDFE;
+        border-radius: 1rem 1rem; /*Gives the box curved corners*/
+      }
+        #Tech_Image_Box_Title {
+          font-size: 1.5rem;
+        }
+        #Tech_Image{ /*Every single image in the tech boxes (parent div: #Tech_Image_Box_Container)*/
+          height: 50%; /*Make all images take up a considerable amount of the tech box*/
+          width: 90%; /*Make them take up most of the box containers space in width*/
+          margin-top: 25%;
+          object-fit: contain; /*Make sure that its proprotions don't distort the image at all*/
+        }
+        
 
 /*Contact divs*/
 #Contact_Information_Container {

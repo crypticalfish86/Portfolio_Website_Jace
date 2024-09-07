@@ -1,3 +1,4 @@
+import { ListedTechs } from "./Projects/Listed_Techs"
 import { ProjectFolders } from "./Projects/ProjectFolders"
 
 export const Projects = () =>
@@ -8,7 +9,9 @@ export const Projects = () =>
                 <ProjectFolders />
             </div>
             <div id="Listed_Techs_Container" className='Container_Box'>
-            ListedTechsContainer
+                <ListedTechs />
+                <ListedTechs />
+                <ListedTechs /> {/*Three of these required to create infinite loop illusion without any jumps*/}
             </div>
         </div>
     )
