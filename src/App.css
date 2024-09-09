@@ -69,6 +69,7 @@
     
   }
     #Hover_Box {
+      cursor: pointer;
       margin-left: auto; /*Centres div with margin-right*/
       margin-right: auto; /*Centres div with margin-left*/
       width: fit-content; /*Makes box as big as text inside*/
