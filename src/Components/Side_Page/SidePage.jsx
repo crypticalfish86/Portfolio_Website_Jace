@@ -1,15 +1,14 @@
 import { SidePageButton } from "./SidePageButton"
 
-export const SidePage = (props) =>
+export const SidePage = () =>
 {
-    const setViewedComponentString = props.setViewedComponentString
     return(
         <div id="Side_Page_Container" className='Container_Box'>
             <div id="Side_Page_Button_Container">
-                <SidePageButton name={"Home"} setViewedComponentString = {setViewedComponentString}/>
-                <SidePageButton name={"Experience"} setViewedComponentString = {setViewedComponentString}/>
-                <SidePageButton name={"Projects"} setViewedComponentString = {setViewedComponentString}/>
-                <SidePageButton name={"Contacts"} setViewedComponentString = {setViewedComponentString}/>
+                <SidePageButton name={"Home"}/>
+                <SidePageButton name={"Experience"}/>
+                <SidePageButton name={"Projects"}/>
+                <SidePageButton name={"Contacts"}/>
             </div>
         </div>
     )
