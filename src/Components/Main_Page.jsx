@@ -1,32 +1,19 @@
-import { useEffect, useState } from "react"
 import { SidePageButton } from "./Side_Page/SidePageButton"
-import { Projects } from "./Main_Page/Projects";
-import { Home } from "./Main_Page/Home";
-import { Contacts } from "./Main_Page/Contacts";
 
-export const MainPage = () =>
+export const MainPage = (props) =>
 {
-    const [currentMainPageVariationHTML, setMainPageVariationHTML] = useState(<div>Error, main page failed to load</div>);
-
-    
-
-    /*Temp set up of function until other pages are created*/
-    function changeMainPageVariationHTML(currentPageName)
-    {
-        setMainPageVariationHTML(<Projects />)
-    }
-    useEffect(() => {changeMainPageVariationHTML("Projects")}, [])
-
+    const currentViewedComponentHTML = props.currentViewedComponentHTML
+    const setViewedComponentString = props.setViewedComponentString
 
     return(
         <div id="Main_Page">
             <div id="Zoomed_In_Side_Page_Container"> {/*On Zoom this container becomes visible*/}
-                <SidePageButton name={"Home"}/>
-                <SidePageButton name={"Experience"}/>
-                <SidePageButton name={"Projects"}/>
-                <SidePageButton name={"Contacts"}/>
+                <SidePageButton name={"Home"} setViewedComponentString = {setViewedComponentString}/>
+                <SidePageButton name={"Experience"} setViewedComponentString = {setViewedComponentString}/>
+                <SidePageButton name={"Projects"} setViewedComponentString = {setViewedComponentString}/>
+                <SidePageButton name={"Contacts"} setViewedComponentString = {setViewedComponentString}/>
             </div>
-            {currentMainPageVariationHTML}
+            {currentViewedComponentHTML}
         </div>
     )
 }
