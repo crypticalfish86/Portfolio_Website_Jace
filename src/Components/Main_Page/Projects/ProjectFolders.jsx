@@ -51,12 +51,12 @@ export const ProjectFolders = () =>
             const arrayOfWorkObjects = [];
             for (let i = 0; i < arrayOfUnprocessedWorkObjectArrays.length; i++)
             {
-                let singularWorkObject = {txtDescription : "", images : []};
+                let singularWorkObject = {txtFile : "", images : []};
                 for (let j = 0; j < arrayOfUnprocessedWorkObjectArrays[i].length; j++)
                 {
                     if(arrayOfUnprocessedWorkObjectArrays[i][j].includes(".txt"))
                     {
-                        singularWorkObject.txtDescription = arrayOfUnprocessedWorkObjectArrays[i][j];
+                        singularWorkObject.txtFile = path(arrayOfUnprocessedWorkObjectArrays[i][j]);
                     }
                     else
                     {
@@ -86,7 +86,7 @@ export const ProjectFolders = () =>
                 //for every workObject in the array push a SingleProjectFolder to workObjectHTML
                 workObjects.forEach( (workObject) =>
                     {
-                        workObjectHTML.push(<SingleProjectFolder />)
+                        workObjectHTML.push(<SingleProjectFolder images={workObject.images} txtFile={workObject.txtFile}/>)
                     }
                 )
 
