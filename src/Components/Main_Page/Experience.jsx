@@ -1,6 +1,8 @@
 export const Experience = () =>
 {
     return(
-        <div>Experience</div>
+        <div id="Whole_Experience_Container_Div">
+            Experience
+        </div>
     )
 }

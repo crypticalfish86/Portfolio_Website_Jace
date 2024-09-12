@@ -46,7 +46,7 @@ export const ProjectFolders = () =>
     
             /*
                 In this block of code we finally make the array of workObjects by taking each nested array and converting them into an object that looks like this:
-                {txtDescription : ".txtfileURL", images: ["image1", "image2", "image3", ...]}
+                {txtFile : ".txtfileURL", images: ["image1", "image2", "image3", ...]}
             */
             const arrayOfWorkObjects = [];
             for (let i = 0; i < arrayOfUnprocessedWorkObjectArrays.length; i++)

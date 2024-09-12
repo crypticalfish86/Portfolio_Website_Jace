@@ -17,7 +17,6 @@ export const SingleProjectFolder = (props) =>
         }, [txtFile]
     )
 
-    console.log(txtFileContent)
     return(
         <div id="Single_Project_Folder">
             SingleProjectFolder

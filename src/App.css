@@ -42,6 +42,11 @@
   height: 100%;
 }
 
+#Whole_Experience_Container_Div {
+  outline: solid #01CDFE 2px;
+  height: 100%;
+}
+
   #Zoomed_In_Side_Page_Container{
     font-size: 3vw; /*Maintains a constant size (best we can do to account for 500% zoom in*/
     height: 0%; /*Start hidden when not zoomed in*/

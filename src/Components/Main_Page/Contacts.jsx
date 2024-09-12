@@ -8,8 +8,8 @@ export const Contacts = () =>
                 <p id="Contact_Details_Paragraph">
                     Email: 2350485@swansea.ac.uk<br />
                     Phone Number: 07557301204 <br />
-                    LinkedIn: https://www.linkedin.com/in/jace-weerawardena-2b350a220/ <br />
-                    Github: https://github.com/crypticalfish86 <br />
+                    LinkedIn: <a href="https://www.linkedin.com/in/jace-weerawardena-2b350a220/">linkedin.com/in/jace-weerawardena-2b350a220/</a>  <br />
+                    Github: <a href="https://github.com/crypticalfish86">github.com/crypticalfish86</a> <br />
                 </p>
             </div>
             <div id="Thankyou_Container">
