@@ -238,13 +238,17 @@
     height: fit-content;
   }
     #Project_Folders_Container {
-      height: 60%; /*60% height of parent div (Main_Page)*/
+      overflow: scroll;
+      height: 20rem; /*60% height of parent div (Main_Page)*/
     }
     #Zoomed_In_Side_Page_Container{
       display: flex; /*Reveal div on zoom in*/
       height: 10%; /*10% height of parent div (Main_Page)*/
     }
   #Side_Page_Container{
+    display: none;
+  }
+  #Listed_Techs_Container{
     display: none;
   }
 }
@@ -265,10 +269,11 @@
   #Zoomed_In_Side_Page_Container {
     height: 20%;
   }
-  #Project_Folders_Container {
-    height: 80%;
-  }
   #Listed_Techs_Container {
     display: none;
+  }
+  #Project_Folders_Container {
+    overflow: scroll;
+    height: 20rem; /*60% height of parent div (Main_Page)*/
   }
 }
