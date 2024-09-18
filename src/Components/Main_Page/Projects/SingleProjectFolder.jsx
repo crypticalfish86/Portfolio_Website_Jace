@@ -16,7 +16,7 @@ export const SingleProjectFolder = (props) =>
             .catch(error => console.log(error)) //if there is an error console log it
         }, [txtFile]
     )
-
+    
     return(
         <div id="Single_Project_Folder">
             SingleProjectFolder
