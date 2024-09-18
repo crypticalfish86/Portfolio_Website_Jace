@@ -127,6 +127,12 @@
   }
 
 /*Experience divs*/
+#Experience_Folders {
+  display: flex; /*Ensures horizontal ordering of individual folders*/
+}
+  #Single_Project_Folder {
+    border: #01CDFE 1px solid;
+  }
 /*Project divs*/
   #Project_Folders_Container { /*Parent div: Whole_Projects_Container_Div*/
     height: 60%; /*70% height of parent div (Whole_Projects_Container_Div)*/
@@ -137,7 +143,9 @@
       margin-top: 1%;
       gap: 1rem;
     }
-      #Single_Project_Folder {
+      #Single_Experience_Folder {
+        margin-left: 1%;
+        margin-top: 1%;
         border: #01CDFE 1px solid;
       }
 

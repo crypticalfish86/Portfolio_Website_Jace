@@ -1,1 +1,4 @@
-NORTHCODERS NORTHCODERS NORTHCODERS
+COMPANY_NAME: Northcoders
+JOB_NAME: Trainee full-stack developer
+DATE: 01/01/1900
+JOB_DESCRIPTION: content content content

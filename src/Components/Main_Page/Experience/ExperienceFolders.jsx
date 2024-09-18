@@ -20,7 +20,7 @@ export const ExperienceFolders = () => {
     }, [experienceFilePaths]);
 
     return (
-        <div>
+        <div id="Experience_Folders">
             {currentExperienceFoldersHTML}
         </div>
     );
