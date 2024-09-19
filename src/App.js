@@ -6,6 +6,7 @@ import { Home } from './Components/Main_Page/Home';
 import { Experience } from './Components/Main_Page/Experience'
 import { Projects } from './Components/Main_Page/Projects'
 import { Contacts } from './Components/Main_Page/Contacts'
+import { ExperienceAndProjectsContext } from './Components/Experience_And_Projects_Context';
 
 function App() {
 
@@ -40,10 +41,23 @@ function App() {
   )
   
 
+  const [currentProjectOrExperienceObject, setProjectOrExperienceCurrentObject] = useState({objectType:"Default"}) //hook to be fed into create context
+
+  //Effect occurs when someone clicks a project or experience folder (and generates a new object)
+  useEffect( () =>
+  {
+    console.log(currentProjectOrExperienceObject)
+  }, [currentProjectOrExperienceObject]
+
+  )
+
+
   return (
     <div className="App">
-      <SidePage setViewedComponentString= {setCurrentViewedComponentString}/>
-      <MainPage setViewedComponentString={setCurrentViewedComponentString} currentViewedComponentHTML={currentViewedComponentHTML}/>
+      <ExperienceAndProjectsContext.Provider value={{currentProjectOrExperienceObject, setProjectOrExperienceCurrentObject}}>
+        <SidePage setViewedComponentString= {setCurrentViewedComponentString}/>
+        <MainPage setViewedComponentString={setCurrentViewedComponentString} currentViewedComponentHTML={currentViewedComponentHTML}/>
+      </ExperienceAndProjectsContext.Provider>
     </div>
   );
 }

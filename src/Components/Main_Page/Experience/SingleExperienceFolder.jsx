@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { ExperienceAndProjectsContext } from "../../Experience_And_Projects_Context";
 
 export const SingleExperienceFolder = (props) =>
 {
     const filepathForTxt = props.filePath;
+
+    const {currentProjectOrExperienceObject, setProjectOrExperienceCurrentObject} = useContext(ExperienceAndProjectsContext);//The context to pass the experience object to so app can change the main page if folder is clicked
+
 
     const [experienceFileContent, setExperienceFileContent] = useState(""); //"experienceFileContent" should be a string containing all text in the txt file in "filePathForTxt"
 
@@ -17,7 +21,7 @@ export const SingleExperienceFolder = (props) =>
     )
 
 
-    const [currentExperienceObject, setExperienceObject] = useState({CompanyName: "DefaultName"}); //usestate to
+    const [currentExperienceObject, setExperienceObject] = useState({CompanyName: "DefaultName"}); //usestate to hold the experience object
 
     useEffect( () =>
         {
@@ -54,13 +58,12 @@ export const SingleExperienceFolder = (props) =>
         /*Create object*/
         const experienceObject = 
             {
+                objectType: "Experience",//experience objects ALWAYS have this type to differentiate from project/work objects
                 companyName: companyName,
                 jobName: jobName,
                 date: date,
                 jobDescription: jobDescription
             }
-        console.log(experienceObject)
-
         return experienceObject;//return object
     }
         function getSpecificContentAfterStringMarker(stringMarker) //this child function returns the specific content after a stringMarker e.g. COMPANY_NAME and before the next stringMarker e.g.JOB_Name
@@ -89,8 +92,15 @@ export const SingleExperienceFolder = (props) =>
         }
     
 
+    function openExperiencePage(event)
+    {
+        event.preventDefault();
+        setProjectOrExperienceCurrentObject(currentExperienceObject)
+    }
+
+
     return(
-        <div id="Single_Experience_Folder">
+        <div id="Single_Experience_Folder" onClick={(event) => {openExperiencePage(event)}}>
             {currentExperienceObject.companyName}
         </div>
     )
