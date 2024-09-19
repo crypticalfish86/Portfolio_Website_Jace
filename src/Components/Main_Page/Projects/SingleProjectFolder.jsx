@@ -1,9 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
+import { ExperienceAndProjectsContext } from "../../Experience_And_Projects_Context";
 
 export const SingleProjectFolder = (props) =>
 {
+
     const txtFile = props.txtFile; //The file containing the work object description
     const images = props.images; //the images of the work object
+
+    const {currentProjectOrExperienceObject, setProjectOrExperienceCurrentObject} = useContext(ExperienceAndProjectsContext);//The context to pass the project object to so app can change the main page if folder is clicked
 
     const [txtFileContent, setFileContent] = useState('');//state to store the .txt file content
 
@@ -17,8 +21,22 @@ export const SingleProjectFolder = (props) =>
         }, [txtFile]
     )
     
+
+    const projectObject = useMemo( () => //this is the project object to be sent up to the parent context allowing us to trigger the page change to this specific project
+        {
+            return {objectType : "Project", description : txtFileContent, images : images}
+        }, [txtFileContent]
+    )
+
+   
+    function openProjectPage(event)
+    {
+        event.preventDefault();
+        setProjectOrExperienceCurrentObject(projectObject)
+    }
+
     return(
-        <div id="Single_Project_Folder">
+        <div id="Single_Project_Folder" onClick={(event) => {openProjectPage(event)}}>
             SingleProjectFolder
         </div>
     )

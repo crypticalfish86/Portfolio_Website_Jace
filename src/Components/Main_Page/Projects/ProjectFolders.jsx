@@ -46,12 +46,12 @@ export const ProjectFolders = () =>
     
             /*
                 In this block of code we finally make the array of workObjects by taking each nested array and converting them into an object that looks like this:
-                {txtFile : ".txtfileURL", images: ["image1", "image2", "image3", ...]}
+                {objectType : "Projects", txtFile : ".txtfileURL", images: ["image1", "image2", "image3", ...]}
             */
             const arrayOfWorkObjects = [];
             for (let i = 0; i < arrayOfUnprocessedWorkObjectArrays.length; i++)
             {
-                let singularWorkObject = {txtFile : "", images : []};
+                let singularWorkObject = {objectType : "Pre_Processed_Projects(Don't Use Directly, Use object in child)",txtFile : "", images : []}; //structure of the object (all work objects have this type before they're processed properly in the child component)
                 for (let j = 0; j < arrayOfUnprocessedWorkObjectArrays[i].length; j++)
                 {
                     if(arrayOfUnprocessedWorkObjectArrays[i][j].includes(".txt"))
