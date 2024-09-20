@@ -1,4 +1,4 @@
-COMPANY_NAME: Avonline
+COMPANY_NAME: Avonline Networks
 JOB_NAME: Commercial Administrator
 DATE: 01/01/1900
 JOB_DESCRIPTION: content content content

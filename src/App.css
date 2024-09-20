@@ -62,6 +62,10 @@
       margin-bottom: 1rem;
     }
 
+#Whole_Experience_And_Projects_Page_Container{
+  height: 100%;
+}
+
 #Whole_Contacts_Container_Div{
   height: 100%;
 }
@@ -187,6 +191,25 @@
           object-fit: contain; /*Make sure that its proprotions don't distort the image at all*/
         }
         
+/*Experience And Projects Page divs (distinct from experience divs and projects divs, it's its own unique page with unique html)*/
+#Experience_Page{ /*Parent is Whole_Experience_And_Projects_Page_Div*/
+  width: 100%;
+  height: 100%;
+}
+  #Experience_Title{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    border-bottom: solid 2px #01CDFE;
+  }
+    #Experience_Title div{
+      font-size: 3rem;
+      margin: 1%;
+    }
+  #Experience_Description{
+    overflow: scroll;
+  }
+
 
 /*Contact divs*/
 #Contact_Information_Container {

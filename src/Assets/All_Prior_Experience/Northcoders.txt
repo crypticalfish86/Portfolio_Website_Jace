@@ -1,4 +1,4 @@
 COMPANY_NAME: Northcoders
 JOB_NAME: Trainee full-stack developer
-DATE: 01/01/1900
-JOB_DESCRIPTION: content content content
+DATE: 01/11/2022- 12/03/2023
+JOB_DESCRIPTION: A 5 month long coding bootcamp centred around front and back end web development. I developed and hosted a number of api’s from scratch using Node.js and Javascript-Express, and Python-Django. Also had an introduction to front end web development using Javascript-React and the creation of a mobile app using Javascript-React Native.
