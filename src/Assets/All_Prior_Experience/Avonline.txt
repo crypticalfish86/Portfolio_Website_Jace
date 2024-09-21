@@ -1,4 +1,6 @@
 COMPANY_NAME: Avonline Networks
 JOB_NAME: Commercial Administrator
 DATE: 01/01/1900
-JOB_DESCRIPTION: content content content
+JOB_DESCRIPTION: Reviewing blueprints, test results of works and invoices to approve costs for construction of fibre optic cabling as well as compiling payments and deductions for subcontractor payments, certifying documents relating to financial compensation on Salesforce and Oracle software for Virgin Media.
+Developed in depth understanding of oracle and salesforce software
+Experience with invoicing for a medium sized corporation

@@ -33,10 +33,12 @@ export const ExperienceAndProjectsPage = (props) =>
                     <div id="Experience_Page">
                         <div id="Experience_Title">
                             <div id="Experience_Company_Name">{objectToDisplay.companyName}</div>
+                            <div id="Experience_Date">{objectToDisplay.date}</div>
                         </div>
-                        <div id="Experience_Job_Title">{objectToDisplay.jobName}</div>
-                        <div id="Experience_Date">{objectToDisplay.date}</div>
-                        <div id="Experience_Description">{objectToDisplay.jobDescription}</div>
+                        <div id="Experience_Information">
+                            <div id="Experience_Job_Title">{objectToDisplay.jobName}</div>
+                            <div id="Experience_Description">{objectToDisplay.jobDescription}</div>
+                        </div>
                     </div>
                 )
             }

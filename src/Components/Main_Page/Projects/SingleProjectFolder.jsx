@@ -24,6 +24,7 @@ export const SingleProjectFolder = (props) =>
 
     const projectObject = useMemo( () => //this is the project object to be sent up to the parent context allowing us to trigger the page change to this specific project
         {
+            console.log(txtFileContent);
             return {objectType : "Project", description : txtFileContent, images : images}
         }, [txtFileContent]
     )
