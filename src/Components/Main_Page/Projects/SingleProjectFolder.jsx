@@ -22,16 +22,42 @@ export const SingleProjectFolder = (props) =>
     )
     
 
+    function getSpecificContentAfterStringMarker(stringMarker) //this child function returns the specific content after a stringMarker e.g. COMPANY_NAME and before the next stringMarker e.g.JOB_Name
+    {
+        const fullContent = txtFileContent;
+        const startIndex = txtFileContent.indexOf(stringMarker);//returns the index of the start of the stringMarker in the content
+
+        if(startIndex !== -1) //Check to ensure the stringMarker has been found before proceeding
+        {
+            const entireStringAfterStringMarker = fullContent.slice(startIndex + stringMarker.length)
+            const nextStringMarkerInContent = entireStringAfterStringMarker.match(/\b\w*[A-Z]{3,}\w*\b/) //Finds the next word containing more than 3 capital letters in it
+
+            if (nextStringMarkerInContent)
+            {
+                return entireStringAfterStringMarker.slice(0, entireStringAfterStringMarker.indexOf(nextStringMarkerInContent[0])).trim() //returns all the content after stringMarker but before next stringMarker with any whitespace trimmed off
+            }
+            else
+            {
+                return entireStringAfterStringMarker;
+            }
+        }
+        else
+        {
+            return "Error string not found"
+        }
+    }
+
+
     const projectObject = useMemo( () => //this is the project object to be sent up to the parent context allowing us to trigger the page change to this specific project
         {
-            console.log(txtFileContent);
-            return {objectType : "Project", description : txtFileContent, images : images}
+            return {objectType : "Project",title: getSpecificContentAfterStringMarker("TITLE:"), date: getSpecificContentAfterStringMarker("DATE:"), technologiesUsed: getSpecificContentAfterStringMarker("TECHNOLOGIES_USED:"),  description : getSpecificContentAfterStringMarker("DESCRIPTION:"), images : images}
         }, [txtFileContent]
     )
 
    
     function openProjectPage(event)
     {
+        console.log(projectObject)
         event.preventDefault();
         setProjectOrExperienceCurrentObject(projectObject)
     }

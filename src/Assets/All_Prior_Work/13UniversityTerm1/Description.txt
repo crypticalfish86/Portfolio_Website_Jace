@@ -2,7 +2,7 @@ TITLE: First term of University
 
 DATE: Sept/2023 - Jan/2024  
 
-TECHNOLOGIES_USED:  
+TECHNOLOGIES_USED:  ttt
 
 DESCRIPTION: 
 

@@ -2,7 +2,7 @@ TITLE: Second term of university
 
 DATE: Jan/2024 - Jun/2024  
 
-TECHNOLOGIES_USED:  
+TECHNOLOGIES_USED:  ttt
 
 DESCRIPTION: 
 
