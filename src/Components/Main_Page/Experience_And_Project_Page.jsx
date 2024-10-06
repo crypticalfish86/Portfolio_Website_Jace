@@ -44,7 +44,19 @@ export const ExperienceAndProjectsPage = (props) =>
             }
             else if(objectToDisplay.objectType === "Project")
             {
-                setCurrentDivHTML(<div>Projects Page</div>)
+                setCurrentDivHTML(//note it uses the same divs as experience for format but the div ids are worded just for experience, update this when you have time (not urgent)
+                    <div>
+                        <div id="Experience_Title">
+                            <div id="Experience_Company_Name">{objectToDisplay.title}</div>
+                            <div id="Experience_Date">{objectToDisplay.date}</div>
+                        </div>
+                        <div id="Experience_Information">
+                            <div id="Experience_Description">{objectToDisplay.description}</div>
+                            <div id="Experience_Job_Title">TechnologiesUsed: {objectToDisplay.technologiesUsed}</div>
+                        </div>
+                    </div>
+
+                )
             }
         }, [objectToDisplay]
     )

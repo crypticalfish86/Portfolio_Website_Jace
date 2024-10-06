@@ -3,6 +3,13 @@ import { ExperienceAndProjectsContext } from "../../Experience_And_Projects_Cont
 
 /*
     This renders the single project folders as well as loads their content into the "ExperienceAndProjects" page to display when one of these components is clicked
+
+    The important variables in this component are:
+    useState: txtFileContent - The raw string data containing the content of the txt file
+    props: images - An array of all the images of the work object
+    object: projectObject - The object containing strings making up the description as well as the array of image URLS
+                            Project object looks like this:
+                            {objectType : "Project", title: title_string, date: date_string, technologiesUsed: technologies_string, description: description_string, images: [image, image, image, ...]}
 */
 
 
